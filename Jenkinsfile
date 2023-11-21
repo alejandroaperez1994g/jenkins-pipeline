@@ -54,6 +54,23 @@ pipeline {
             }
         }
 
+
+        stage('Notificar a Slack') {
+            steps {
+                // Enviar mensaje a Slack
+                slackSend(channel: '#tjenkins-notifications', message: 'El pipeline ha completado su ejecución.')
+            }
+        }
         
+    }
+    post {
+        success {
+            // Enviar notificación de éxito a Slack
+            slackSend(channel: '#tjenkins-notifications', message: '¡Éxito! El pipeline se ejecutó correctamente.')
+        }
+        failure {
+            // Enviar notificación de fallo a Slack
+            slackSend(channel: '#tjenkins-notifications', message: 'Fallo en el pipeline. Revisar Jenkins para más detalles.')
+        }
     }
 }
