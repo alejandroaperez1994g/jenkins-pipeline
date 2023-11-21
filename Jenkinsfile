@@ -4,8 +4,6 @@ pipeline {
     stages {
         stage('Preparación') {
             steps {
-                // Clona el repositorio usando el comando git clone
-                sh 'git clone https://github.com/alejandroaperez1994g/cloudflare_vie.git'
 
                 // Cambia al directorio del repositorio clonado
 
