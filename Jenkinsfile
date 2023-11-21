@@ -17,5 +17,20 @@ pipeline {
                 
             }
         }
+        stage('Instalar dependencias') {
+            steps {
+                dir('cloudflare_vie') {
+                    sh 'npm install'
+                }
+            }
+        }
+
+        stage('Ejecutar tests') {
+            steps {
+                dir('cloudflare_vie') {
+                    sh 'npm test'
+                }
+            }
+        }
     }
 }
