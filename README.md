@@ -7,9 +7,5 @@ If you are developing a production application, we recommend updating the config
 
 - Configure the top-level `parserOptions` property like this:
 - We recommend using the `plugin:@typescript-eslint/recommended` plugin, which will enable type-aware linting rules for TypeScript code. You can do this by adding `@typescript-eslint/recommended` to the `extends` array.
-- Hello
-- Hello number 2
-- Hello number 3
-- Hello number 4
 
 
