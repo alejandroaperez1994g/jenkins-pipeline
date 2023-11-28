@@ -9,19 +9,5 @@ If you are developing a production application, we recommend updating the config
 - We recommend using the `plugin:@typescript-eslint/recommended` plugin, which will enable type-aware linting rules for TypeScript code. You can do this by adding `@typescript-eslint/recommended` to the `extends` array.
 - We recommend using the `plugin:react/recommended` plugin, which will enable additional React-specific linting rules for ESLint. You can do this by adding `plugin:react/recommended` to the `extends` array.
 
-```js
-{
-  "parserOptions": {
-    "project": "./tsconfig.json",
-    "tsconfigRootDir": __dirname,
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
-  ]
-}
-```
+
 
